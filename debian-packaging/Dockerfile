@@ -1,7 +1,7 @@
 FROM debian:testing
 
 LABEL description="Debian package development environment"
-MAINTAINER Bart joy
+MAINTAINER Bart Joy
 
 # install packages
 ARG DEBIAN_FRONTEND=noninteractive
