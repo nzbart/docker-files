@@ -14,7 +14,7 @@ RUN apt-get update; \
     rm -rf /var/log/*;
 
 # prepare work dir
-RUN sudo mkdir -p /src; sudo chown builder:builder /src; echo 'cd /src' >> /home/builder/.bashrc
+RUN mkdir -p /src; chown builder:builder /src; echo 'cd /src' >> /home/builder/.bashrc
 
 # remove previous entrypoint
 ENTRYPOINT []
