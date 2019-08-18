@@ -12,6 +12,7 @@ RUN apt-get autoremove -y; apt-get clean; rm /var/lib/apt/lists/*; rm -rf /var/l
 
 RUN useradd -ms /bin/bash builder
 RUN adduser builder sudo
+RUN echo "builder ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers
 RUN mkdir -p /src; chown builder:builder /src; echo 'cd /src' >> /home/builder/.bashrc
 USER builder
 WORKDIR /home/builder
